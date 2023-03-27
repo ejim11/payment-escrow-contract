@@ -59,5 +59,5 @@ contract PaymentEscrow {
         s_isApproved = true;
     }
 
-    function revertTransaction() external {}
+    // function revertTransaction() external {}
 }
