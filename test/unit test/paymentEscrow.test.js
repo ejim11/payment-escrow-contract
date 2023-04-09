@@ -20,12 +20,12 @@ describe("Payment-Escrow", function () {
     });
 
     describe("constructor", function () {
-        it("should transfer a value of 0.4ether to the contract after deployment", async function () {
+        it("should transfer a value of 1ether to the contract after deployment", async function () {
             const presentContractBalance = await ethers.provider.getBalance(
                 paymentEscrowContract.address
             );
 
-            assert.equal(presentContractBalance.toString() / 1e18, "0.4");
+            assert.equal(presentContractBalance.toString() / 1e18, "1");
         });
 
         it("should set an arbiter and a beneficiary after deployment", async function () {

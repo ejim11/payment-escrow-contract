@@ -24,6 +24,12 @@ contract PaymentEscrow {
         uint amount
     );
 
+    event Payed(
+        address indexed payer,
+        address indexed beneficiary,
+        uint amount
+    );
+
     // modifiers
     modifier onlyArbiter() {
         if (msg.sender != s_arbiter) {
@@ -33,20 +39,20 @@ contract PaymentEscrow {
     }
 
     // functions
+    constructor(address _arbiter, address _beneficiary) payable {
+        s_arbiter = _arbiter;
+        s_beneficiary = _beneficiary;
+        s_payer = msg.sender;
+
+        emit Payed(msg.sender, _beneficiary, msg.value);
+    }
 
     receive() external payable {}
 
-    function pay(address _beneficiary, address _arbiter) external payable {
-        s_payer = msg.sender;
-        s_beneficiary = _beneficiary;
-        s_arbiter = _arbiter;
-        (bool callSuccess, ) = address(this).call{value: msg.value}("");
-
-        if (!callSuccess) revert PaymentEscrow__TransactionUnsuccesful();
-    }
-
     function approve() external onlyArbiter {
         uint balance = address(this).balance;
+
+        uint fee = (address(this).balance / 1000) * 5;
 
         uint payedAmount = balance - (address(this).balance / 1000) * 5;
 
@@ -54,10 +60,12 @@ contract PaymentEscrow {
 
         if (!callSuccess) revert PaymentEscrow__TransactionUnsuccesful();
 
+        (bool feeSuccess, ) = s_arbiter.call{value: fee}("");
+
+        if (!feeSuccess) revert PaymentEscrow__TransactionUnsuccesful();
+
         emit Approved(s_payer, s_beneficiary, payedAmount);
 
         s_isApproved = true;
     }
-
-    // function revertTransaction() external {}
 }

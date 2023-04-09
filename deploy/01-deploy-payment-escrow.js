@@ -5,7 +5,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const { payer, arbiter, beneficiary } = await getNamedAccounts();
     const { deploy, log } = deployments;
 
-    const amount = ethers.utils.parseEther("0.4");
+    const amount = ethers.utils.parseEther("1");
 
     const args = [arbiter, beneficiary];
 

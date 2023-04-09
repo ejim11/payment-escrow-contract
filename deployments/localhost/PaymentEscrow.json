@@ -1,0 +1,204 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "PaymentEscrow__NotArbiter",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PaymentEscrow__TransactionUnsuccesful",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "payer",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beneficiary",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approved",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_arbiter",
+          "type": "address"
+        }
+      ],
+      "name": "pay",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "s_arbiter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "s_beneficiary",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "s_isApproved",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "s_payer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0x9dffb37836edf303e6678e2f493ce286c013cf85972de6293e7c021c91ccfa65",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "transactionIndex": 0,
+    "gasUsed": "502587",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xc38afac31b53893f3dc902a024e3b616a76d6069018c6f90a374b32297952ad6",
+    "transactionHash": "0x9dffb37836edf303e6678e2f493ce286c013cf85972de6293e7c021c91ccfa65",
+    "logs": [],
+    "blockNumber": 1,
+    "cumulativeGasUsed": "502587",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "399c1c0e0d8323497ed2cf0cacf25edb",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"PaymentEscrow__NotArbiter\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PaymentEscrow__TransactionUnsuccesful\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"payer\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"beneficiary\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Approved\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_arbiter\",\"type\":\"address\"}],\"name\":\"pay\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"s_arbiter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"s_beneficiary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"s_isApproved\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"s_payer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"author\":\"Ejim favour\",\"kind\":\"dev\",\"methods\":{},\"title\":\"A Payment Escrow Contract\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"This contract ensures secure and credible payment for goods and services.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/paymentEscrow.sol\":\"PaymentEscrow\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/paymentEscrow.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.7;\\r\\n\\r\\n// errors\\r\\nerror PaymentEscrow__NotArbiter();\\r\\nerror PaymentEscrow__TransactionUnsuccesful();\\r\\n\\r\\n/**@title A Payment Escrow Contract\\r\\n * @author Ejim favour\\r\\n * @notice This contract ensures secure and credible payment for goods and services.\\r\\n */\\r\\n\\r\\ncontract PaymentEscrow {\\r\\n    // state variables\\r\\n    address public s_arbiter;\\r\\n    address public s_beneficiary;\\r\\n    address public s_payer;\\r\\n    bool public s_isApproved;\\r\\n\\r\\n    // events\\r\\n    event Approved(\\r\\n        address indexed payer,\\r\\n        address indexed beneficiary,\\r\\n        uint amount\\r\\n    );\\r\\n\\r\\n    // modifiers\\r\\n    modifier onlyArbiter() {\\r\\n        if (msg.sender != s_arbiter) {\\r\\n            revert PaymentEscrow__NotArbiter();\\r\\n        }\\r\\n        _;\\r\\n    }\\r\\n\\r\\n    // functions\\r\\n\\r\\n    receive() external payable {}\\r\\n\\r\\n    function pay(address _beneficiary, address _arbiter) external payable {\\r\\n        s_payer = msg.sender;\\r\\n        s_beneficiary = _beneficiary;\\r\\n        s_arbiter = _arbiter;\\r\\n        (bool callSuccess, ) = address(this).call{value: msg.value}(\\\"\\\");\\r\\n\\r\\n        if (!callSuccess) revert PaymentEscrow__TransactionUnsuccesful();\\r\\n    }\\r\\n\\r\\n    function approve() external onlyArbiter {\\r\\n        uint balance = address(this).balance;\\r\\n\\r\\n        uint payedAmount = balance - (address(this).balance / 1000) * 5;\\r\\n\\r\\n        (bool callSuccess, ) = s_beneficiary.call{value: payedAmount}(\\\"\\\");\\r\\n\\r\\n        if (!callSuccess) revert PaymentEscrow__TransactionUnsuccesful();\\r\\n\\r\\n        emit Approved(s_payer, s_beneficiary, payedAmount);\\r\\n\\r\\n        s_isApproved = true;\\r\\n    }\\r\\n\\r\\n    // function revertTransaction() external {}\\r\\n}\\r\\n\",\"keccak256\":\"0xbfe6f9e8df8a82ae10e304063adebb2090e0b9c283af44683de21eae87fb82f8\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061082a806100206000396000f3fe6080604052600436106100595760003560e01c806312424e3f14610065578063574b56951461007c5780638dc09203146100a7578063bbfeb52c146100d2578063bd0af85d146100fd578063d0e03e2b1461011957610060565b3661006057005b600080fd5b34801561007157600080fd5b5061007a610144565b005b34801561008857600080fd5b50610091610385565b60405161009e919061058d565b60405180910390f35b3480156100b357600080fd5b506100bc610398565b6040516100c991906105e9565b60405180910390f35b3480156100de57600080fd5b506100e76103be565b6040516100f491906105e9565b60405180910390f35b61011760048036038101906101129190610635565b6103e2565b005b34801561012557600080fd5b5061012e61054c565b60405161013b91906105e9565b60405180910390f35b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101c9576040517fcf438efe00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6000479050600060056103e8476101e091906106dd565b6101ea919061070e565b826101f59190610750565b90506000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168260405161023f906107b5565b60006040518083038185875af1925050503d806000811461027c576040519150601f19603f3d011682016040523d82523d6000602084013e610281565b606091505b50509050806102bc576040517f70320bff00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f80da462ebfbe41cfc9bc015e7a9a3c7a2a73dbccede72d8ceb583606c27f8f908460405161035d91906107d9565b60405180910390a36001600260146101000a81548160ff021916908315150217905550505050565b600260149054906101000a900460ff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b33600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060003073ffffffffffffffffffffffffffffffffffffffff16346040516104ca906107b5565b60006040518083038185875af1925050503d8060008114610507576040519150601f19603f3d011682016040523d82523d6000602084013e61050c565b606091505b5050905080610547576040517f70320bff00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008115159050919050565b61058781610572565b82525050565b60006020820190506105a2600083018461057e565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006105d3826105a8565b9050919050565b6105e3816105c8565b82525050565b60006020820190506105fe60008301846105da565b92915050565b600080fd5b610612816105c8565b811461061d57600080fd5b50565b60008135905061062f81610609565b92915050565b6000806040838503121561064c5761064b610604565b5b600061065a85828601610620565b925050602061066b85828601610620565b9150509250929050565b6000819050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006106e882610675565b91506106f383610675565b9250826107035761070261067f565b5b828204905092915050565b600061071982610675565b915061072483610675565b925082820261073281610675565b91508282048414831517610749576107486106ae565b5b5092915050565b600061075b82610675565b915061076683610675565b925082820390508181111561077e5761077d6106ae565b5b92915050565b600081905092915050565b50565b600061079f600083610784565b91506107aa8261078f565b600082019050919050565b60006107c082610792565b9150819050919050565b6107d381610675565b82525050565b60006020820190506107ee60008301846107ca565b9291505056fea2646970667358221220aeaf7418948d5f9dfa8b6ae0f1e62c48082ce092702e0dcd70d4d7b95b2cc95f64736f6c63430008120033",
+  "deployedBytecode": "0x6080604052600436106100595760003560e01c806312424e3f14610065578063574b56951461007c5780638dc09203146100a7578063bbfeb52c146100d2578063bd0af85d146100fd578063d0e03e2b1461011957610060565b3661006057005b600080fd5b34801561007157600080fd5b5061007a610144565b005b34801561008857600080fd5b50610091610385565b60405161009e919061058d565b60405180910390f35b3480156100b357600080fd5b506100bc610398565b6040516100c991906105e9565b60405180910390f35b3480156100de57600080fd5b506100e76103be565b6040516100f491906105e9565b60405180910390f35b61011760048036038101906101129190610635565b6103e2565b005b34801561012557600080fd5b5061012e61054c565b60405161013b91906105e9565b60405180910390f35b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101c9576040517fcf438efe00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6000479050600060056103e8476101e091906106dd565b6101ea919061070e565b826101f59190610750565b90506000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168260405161023f906107b5565b60006040518083038185875af1925050503d806000811461027c576040519150601f19603f3d011682016040523d82523d6000602084013e610281565b606091505b50509050806102bc576040517f70320bff00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f80da462ebfbe41cfc9bc015e7a9a3c7a2a73dbccede72d8ceb583606c27f8f908460405161035d91906107d9565b60405180910390a36001600260146101000a81548160ff021916908315150217905550505050565b600260149054906101000a900460ff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b33600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555081600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060003073ffffffffffffffffffffffffffffffffffffffff16346040516104ca906107b5565b60006040518083038185875af1925050503d8060008114610507576040519150601f19603f3d011682016040523d82523d6000602084013e61050c565b606091505b5050905080610547576040517f70320bff00000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b505050565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008115159050919050565b61058781610572565b82525050565b60006020820190506105a2600083018461057e565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b60006105d3826105a8565b9050919050565b6105e3816105c8565b82525050565b60006020820190506105fe60008301846105da565b92915050565b600080fd5b610612816105c8565b811461061d57600080fd5b50565b60008135905061062f81610609565b92915050565b6000806040838503121561064c5761064b610604565b5b600061065a85828601610620565b925050602061066b85828601610620565b9150509250929050565b6000819050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b60006106e882610675565b91506106f383610675565b9250826107035761070261067f565b5b828204905092915050565b600061071982610675565b915061072483610675565b925082820261073281610675565b91508282048414831517610749576107486106ae565b5b5092915050565b600061075b82610675565b915061076683610675565b925082820390508181111561077e5761077d6106ae565b5b92915050565b600081905092915050565b50565b600061079f600083610784565b91506107aa8261078f565b600082019050919050565b60006107c082610792565b9150819050919050565b6107d381610675565b82525050565b60006020820190506107ee60008301846107ca565b9291505056fea2646970667358221220aeaf7418948d5f9dfa8b6ae0f1e62c48082ce092702e0dcd70d4d7b95b2cc95f64736f6c63430008120033",
+  "devdoc": {
+    "author": "Ejim favour",
+    "kind": "dev",
+    "methods": {},
+    "title": "A Payment Escrow Contract",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "This contract ensures secure and credible payment for goods and services.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 8,
+        "contract": "contracts/paymentEscrow.sol:PaymentEscrow",
+        "label": "s_arbiter",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 10,
+        "contract": "contracts/paymentEscrow.sol:PaymentEscrow",
+        "label": "s_beneficiary",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 12,
+        "contract": "contracts/paymentEscrow.sol:PaymentEscrow",
+        "label": "s_payer",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_address"
+      },
+      {
+        "astId": 14,
+        "contract": "contracts/paymentEscrow.sol:PaymentEscrow",
+        "label": "s_isApproved",
+        "offset": 20,
+        "slot": "2",
+        "type": "t_bool"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}

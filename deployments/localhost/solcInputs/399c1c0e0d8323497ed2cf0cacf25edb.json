@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/paymentEscrow.sol": {
+      "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.7;\r\n\r\n// errors\r\nerror PaymentEscrow__NotArbiter();\r\nerror PaymentEscrow__TransactionUnsuccesful();\r\n\r\n/**@title A Payment Escrow Contract\r\n * @author Ejim favour\r\n * @notice This contract ensures secure and credible payment for goods and services.\r\n */\r\n\r\ncontract PaymentEscrow {\r\n    // state variables\r\n    address public s_arbiter;\r\n    address public s_beneficiary;\r\n    address public s_payer;\r\n    bool public s_isApproved;\r\n\r\n    // events\r\n    event Approved(\r\n        address indexed payer,\r\n        address indexed beneficiary,\r\n        uint amount\r\n    );\r\n\r\n    // modifiers\r\n    modifier onlyArbiter() {\r\n        if (msg.sender != s_arbiter) {\r\n            revert PaymentEscrow__NotArbiter();\r\n        }\r\n        _;\r\n    }\r\n\r\n    // functions\r\n\r\n    receive() external payable {}\r\n\r\n    function pay(address _beneficiary, address _arbiter) external payable {\r\n        s_payer = msg.sender;\r\n        s_beneficiary = _beneficiary;\r\n        s_arbiter = _arbiter;\r\n        (bool callSuccess, ) = address(this).call{value: msg.value}(\"\");\r\n\r\n        if (!callSuccess) revert PaymentEscrow__TransactionUnsuccesful();\r\n    }\r\n\r\n    function approve() external onlyArbiter {\r\n        uint balance = address(this).balance;\r\n\r\n        uint payedAmount = balance - (address(this).balance / 1000) * 5;\r\n\r\n        (bool callSuccess, ) = s_beneficiary.call{value: payedAmount}(\"\");\r\n\r\n        if (!callSuccess) revert PaymentEscrow__TransactionUnsuccesful();\r\n\r\n        emit Approved(s_payer, s_beneficiary, payedAmount);\r\n\r\n        s_isApproved = true;\r\n    }\r\n\r\n    // function revertTransaction() external {}\r\n}\r\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
