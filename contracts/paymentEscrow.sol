@@ -40,6 +40,8 @@ contract PaymentEscrow {
 
     // functions
     constructor(address _arbiter, address _beneficiary) payable {
+        if (msg.value < 0) revert PaymentEscrow__TransactionUnsuccesful();
+
         s_arbiter = _arbiter;
         s_beneficiary = _beneficiary;
         s_payer = msg.sender;

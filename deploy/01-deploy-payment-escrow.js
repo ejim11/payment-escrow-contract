@@ -5,7 +5,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const { payer, arbiter, beneficiary } = await getNamedAccounts();
     const { deploy, log } = deployments;
 
-    const amount = ethers.utils.parseUnits("100000000000", "wei");
+    const amount = ethers.utils.parseUnits("1000000000000000000", "wei");
 
     let testArgs = [arbiter, beneficiary];
 
