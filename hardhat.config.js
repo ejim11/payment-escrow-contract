@@ -8,19 +8,19 @@ require("hardhat-gas-reporter");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 
-const TEST_SEPOLIA_URL =
-    process.env.TEST_SEPOLIA_URL || "https:\\eth-sepolia/example";
+const TEST_POLYGON_URL =
+    process.env.TEST_POLYGON_URL || "https:\\eth-POLYGON/example";
 const TEST_PRIVATE_KEY = process.env.TEST_PRIVATE_KEY || "key";
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "key";
+const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || "key";
 const COIN_MARKET_CAP_API_KEY = process.env.COIN_MARKET_CAP_API_KEY || "key";
 
 module.exports = {
     solidity: "0.8.18",
     networks: {
-        sepolia: {
-            url: TEST_SEPOLIA_URL,
+        mumbai: {
+            url: TEST_POLYGON_URL,
             accounts: [TEST_PRIVATE_KEY],
-            chainId: 11155111,
+            chainId: 80001,
             blockConfirmations: 6,
         },
         localhost: {
@@ -29,7 +29,9 @@ module.exports = {
         },
     },
     etherscan: {
-        api: ETHERSCAN_API_KEY,
+        apiKey: {
+            polygonMumbai: POLYGONSCAN_API_KEY,
+        },
     },
     gasReporter: {
         enabled: true,

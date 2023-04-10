@@ -29,10 +29,10 @@ describe("Payment-Escrow", function () {
         });
 
         it("should set an arbiter and a beneficiary after deployment", async function () {
-            const _arbiter = await paymentEscrowContract.S_ARBITER.call();
+            const _arbiter = await paymentEscrowContract.s_arbiter.call();
 
             const _beneficiary =
-                await paymentEscrowContract.S_BENEFICIARY.call();
+                await paymentEscrowContract.s_beneficiary.call();
 
             assert.equal(arbiter, _arbiter);
             assert.equal(beneficiary, _beneficiary);
