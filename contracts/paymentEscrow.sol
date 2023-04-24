@@ -4,6 +4,7 @@ pragma solidity ^0.8.7;
 // errors
 error PaymentEscrow__NotArbiter();
 error PaymentEscrow__TransactionUnsuccesful();
+error PaymentEscrow__PayerCannotBeArbiter();
 
 /**@title A Payment Escrow Contract
  * @author Ejim favour
@@ -41,6 +42,9 @@ contract PaymentEscrow {
     // functions
     constructor(address _arbiter, address _beneficiary) payable {
         if (msg.value < 0) revert PaymentEscrow__TransactionUnsuccesful();
+
+        if (_arbiter == msg.sender)
+            revert PaymentEscrow__PayerCannotBeArbiter();
 
         s_arbiter = _arbiter;
         s_beneficiary = _beneficiary;

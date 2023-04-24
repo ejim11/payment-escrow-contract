@@ -7,16 +7,16 @@ describe("Payment-Escrow", function () {
     beforeEach(async function () {
         payer = (await getNamedAccounts()).payer;
 
+        arbiter = (await getNamedAccounts()).arbiter;
+
+        beneficiary = (await getNamedAccounts()).beneficiary;
+
         await deployments.fixture(["all"]);
 
         paymentEscrowContract = await ethers.getContract(
             "PaymentEscrow",
             payer
         );
-
-        arbiter = (await getNamedAccounts()).arbiter;
-
-        beneficiary = (await getNamedAccounts()).beneficiary;
     });
 
     describe("constructor", function () {
@@ -37,6 +37,12 @@ describe("Payment-Escrow", function () {
             assert.equal(arbiter, _arbiter);
             assert.equal(beneficiary, _beneficiary);
         });
+
+        // it("should prevent a payer from being an arbiter", async function () {
+        //     await expect(
+        //         paymentEscrowContract.connect(await ethers.getSigner(1))
+        //     ).to.be.reverted;
+        // });
     });
 
     describe("approve", function () {
